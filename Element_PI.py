@@ -1,6 +1,7 @@
 from ripser import Rips
 from ripser import ripser
-rips = Rips()
+# rips = Rips(maxdim=2)
+rips = Rips(maxdim=1)
 from sklearn.base import TransformerMixin
 import numpy as np
 import collections
@@ -395,14 +396,71 @@ def VariancePersist3(Filename, pixelx=100, pixely=100, myspread=2, myspecs={"max
         pim.show(imgs)
 
         plt.show()
+    else:
+        pim.show(imgs)
+        
 
     return np.array(imgs.flatten())
 
+def ripser_f(xyz,distance_matrix=True,maxdim=1,thresh=np.inf):
+    """
+    Wrapper for ripser, returns the same as calling ripser!
+
+    Parameters
+    ----------
+    xyz : ndarray (n_atoms, (x,y,z))
+
+    Returns
+    -------
+    dict
+        The result of the computation.
+
+        .. note::
+            Each list in `dgms` has a relative list in `cocycles`.
+
+            >>> r = ripser(...)
+
+            For each dimension ``d`` and index ``k`` then ``r['dgms'][d][k]``
+            is the barcode associated to the representative cocycle
+            ``r['cocycles'][d][k]``.
+
+        The keys available in the dictionary are the:
+
+            * ``dgms``: list (size maxdim) of ndarray (n_pairs, 2)
+                For each dimension less than ``maxdim`` a list of persistence diagrams.
+                Each persistent diagram is a pair (birth time, death time).
+            * ``cocycles``: list (size maxdim) of list of ndarray
+                For each dimension less than ``maxdim`` a list of representative cocycles.
+                Each representative cocycle in dimension ``d`` is represented as a
+                ndarray of ``(k,d+1)`` elements. Each non zero value of the cocycle
+                is laid out in a row, first the ``d`` indices of the simplex and then
+                the value of the cocycle on the simplex.  The indices of the simplex
+                reference the original point cloud, even if a greedy permutation was used.
+            * ``num_edges``: int
+                The number of edges added during the computation
+            * ``dperm2all``: ndarray(n_samples, n_samples) or ndarray (n_perm, n_samples) if n_perm
+                The distance matrix used during the computation. When ``n_perm``
+                is not None the distance matrix will only refers to the subsampled
+                dataset.
+            * ``idx_perm``: ndarray(n_perm) if ``n_perm`` > 0
+                Index into the original point cloud of the points used
+                as a subsample in the greedy permutation
+
+                    >>> r = ripser(X, n_perm=k)
+                    >>> subsampling = X[r['idx_perm']]
+
+            * 'r_cover': float
+                Covering radius of the subsampled points.
+                If ``n_perm <= 0``, then the full point cloud was used and this is 0
+
+
+    """
+    D,elements=Makexyzdistance(xyz)
+    return ripser(D,distance_matrix=distance_matrix,maxdim=maxdim,thresh=thresh)
 
 def dgms(xyz):
     D,elements=Makexyzdistance(xyz)
     data=ripser(D,distance_matrix=True)
-    rips = Rips()
     rips.transform(D, distance_matrix=True)
     rips.dgms_[0]=rips.dgms_[0][0:-1]
     return rips.dgms_
@@ -410,11 +468,10 @@ def dgms(xyz):
 def PersDiagram(xyz, lifetime=True):
     plt.rcParams["font.family"] = "Times New Roman"
     D,elements=Makexyzdistance(xyz)
-    data=ripser(D,distance_matrix=True)
-    rips = Rips()
+    data=ripser(D,distance_matrix=True,maxdim=2)
     rips.transform(D, distance_matrix=True)
     rips.dgms_[0]=rips.dgms_[0][0:-1]
-    rips.plot(show=False, lifetime=lifetime, labels=['Connected Components','Holes'])
-    L = plt.legend()
-    plt.setp(L.texts, family="Times New Roman")
-    plt.rcParams["font.family"] = "Times New Roman"
+    rips.plot(show=False, lifetime=lifetime, labels=['Connected Components','Holes','Voids'])
+    # L = plt.legend()
+    # plt.setp(L.texts, family="Times New Roman")
+    # plt.rcParams["font.family"] = "Times New Roman"
