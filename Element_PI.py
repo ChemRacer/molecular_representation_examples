@@ -329,77 +329,44 @@ def VariancePersist(Filename, pixelx=100, pixely=100, myspread=2, myspecs={"maxB
     if showplot == True:
         pim.show(imgs)
         plt.show()
+    else:
+        pim.show(imgs)       
     return np.array(imgs.flatten())
 
 def VariancePersist3(Filename, pixelx=100, pixely=100, myspread=2, myspecs={"maxBD": 2, "minBD":0}, showplot=True):
-
     #Generate distance matrix and elementlist
-
     D,elements=Makexyzdistance(Filename)
 
-
-
     #Generate data for persistence diagram
-
     a=ripser(D,distance_matrix=True)
 
     #Make the birth,death for h0 and h1
-
     points=(a['dgms'][0][0:-1,1])
-
     pointsh1=(a['dgms'][1])
-
     diagrams = rips.fit_transform(D, distance_matrix=True)
 
     #Find pair electronegativies
 
     eleneg=list()
-
     for index in points:
-
         c=np.where(np.abs((index-a['dperm2all'])) < .00000015)[0]
-
-      #  print (index)
-
-      #  print (c)
-
         eleneg.append(np.abs(ELEMENTS[elements[c[0]]].eleneg - ELEMENTS[elements[c[1]]].eleneg))
 
-
-
-
-
     h0matrix=np.hstack(((diagrams[0][0:-1,:], np.reshape((((np.array(eleneg)*1.05)+.01)/10 ), (np.size(eleneg),1)))))
-
     buffer=np.full((diagrams[1][:,0].size,1), 0.05)
-
     h1matrix=np.hstack((diagrams[1],buffer))
 
-    #print (h0matrix)
-
-    #print (h1matrix)
-
     #combine them
-
     Totalmatrix=h0matrix
-
     pim = PersImage(pixels=[pixelx,pixely], spread=myspread, specs=myspecs, verbose=False)
-
     imgs = pim.transform(Totalmatrix)
-
-    #print (imgs)
-
 
 
     if showplot == True:
-
         pim.show(imgs)
-
         plt.show()
     else:
-        pim.show(imgs)
-        
-
+        pim.show(imgs)        
     return np.array(imgs.flatten())
 
 def ripser_f(xyz,distance_matrix=True,maxdim=1,thresh=np.inf):
@@ -466,12 +433,14 @@ def dgms(xyz):
     return rips.dgms_
 
 def PersDiagram(xyz, lifetime=True):
-    plt.rcParams["font.family"] = "Times New Roman"
+    plt.rcParams.update({'font.size': 12,'font.family':'Times New Roman'})
     D,elements=Makexyzdistance(xyz)
     data=ripser(D,distance_matrix=True,maxdim=2)
     rips.transform(D, distance_matrix=True)
     rips.dgms_[0]=rips.dgms_[0][0:-1]
-    rips.plot(show=False, lifetime=lifetime, labels=['Connected Components','Holes','Voids'])
+    rips.plot(show=False, xy_range=[0,3,0,3], lifetime=lifetime, labels=['Connected Components','Holes','Voids'])
+    plt.ylim(-1e-1,3)
+    plt.xlim(-1e-1,3)
     # L = plt.legend()
     # plt.setp(L.texts, family="Times New Roman")
     # plt.rcParams["font.family"] = "Times New Roman"
