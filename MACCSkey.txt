@@ -1,0 +1,83 @@
+1 & ISOTOPE                              & 84 & NH2   \\ \hline
+2 & 103 < ATOMIC NO. < 256               & 85 & CN(C)C   \\ \hline
+3 & GROUP IVA,VA,VIA PERIODS 4-6 (Ge...) & 86 & CH2QCH2   \\ \hline
+4 & ACTINIDE                             & 87 & X!A$A   \\ \hline
+5 & GROUP IIIB,IVB (Sc...)               & 88 & S   \\ \hline
+6 & LANTHANIDE                           & 89 & OAAAO   \\ \hline
+7 & GROUP VB,VIB,VIIB (V...)             & 90 & QHAACH2A   \\ \hline
+8 & QAAA@1                               & 91 & QHAAACH2A   \\ \hline
+9 & GROUP VIII (Fe...)                   & 92 & OC(N)C   \\ \hline
+10 & GROUP IIA (ALKALINE EARTH)          & 93 & QCH3   \\ \hline
+11 & 4M RING                             & 94 & QN   \\ \hline
+12 & GROUP IB,IIB (Cu...)                & 95 & NAAO   \\ \hline
+13 & ON(C)C                              & 96 & 5M RING   \\ \hline
+14 & S-S                                 & 97 & NAAAO   \\ \hline
+15 & OC(O)O                              & 98 & QAAAAA@1   \\ \hline
+16 & QAA@1                               & 99 & C=C   \\ \hline
+17 & CTC                                 & 100 & ACH2N   \\ \hline
+18 & GROUP IIIA (B...)                   & 101 & 8M RING   \\ \hline
+19 & 7M RING                             & 102 & QO   \\ \hline
+20 & SI                                  & 103 & CL   \\ \hline
+21 & C=C(Q)Q                             & 104 & QHACH2A   \\ \hline
+22 & 3M RING                             & 105 & A$A($A)$A   \\ \hline
+23 & NC(O)O                              & 106 & QA(Q)Q   \\ \hline
+24 & N-O                                 & 107 & XA(A)A   \\ \hline
+25 & NC(N)N                              & 108 & CH3AAACH2A   \\ \hline
+26 & C$=C($A)$A                          & 109 & ACH2O   \\ \hline
+27 & I                                   & 110 & NCO   \\ \hline
+28 & QCH2Q                               & 111 & NACH2A   \\ \hline
+29 & P                                   & 112 & AA(A)(A)A   \\ \hline
+30 & CQ(C)(C)A                           & 113 & Onot%A%A   \\ \hline
+31 & QX                                  & 114 & CH3CH2A   \\ \hline
+32 & CSN                                 & 115 & CH3ACH2A   \\ \hline
+33 & NS                                  & 116 & CH3AACH2A   \\ \hline
+34 & CH2=A                               & 117 & NAO   \\ \hline
+35 & GROUP IA (ALKALI METAL)             & 118 & ACH2CH2A > 1   \\ \hline
+36 & S HETEROCYCLE                       & 119 & N=A   \\ \hline
+37 & NC(O)N                              & 120 & HETEROCYCLIC ATOM > 1     \\ \hline
+38 & NC(C)N                              & 121 & N HETEROCYCLE   \\ \hline
+39 & OS(O)O                              & 122 & AN(A)A   \\ \hline
+40 & S-O                                 & 123 & OCO   \\ \hline
+41 & CTN                                 & 124 & QQ   \\ \hline
+42 & F                                   & 125 & AROMATIC RING > 1   \\ \hline
+43 & QHAQH                               & 126 & A!O!A   \\ \hline
+44 & OTHER                               & 127 & A$A!O > 1     \\ \hline
+45 & C=CN                                & 128 & ACH2AAACH2A   \\ \hline
+46 & BR                                  & 129 & ACH2AACH2A   \\ \hline
+47 & SAN                                 & 130 & QQ > 1     \\ \hline
+48 & OQ(O)O                              & 131 & QH > 1   \\ \hline
+49 & CHARGE                              & 132 & OACH2A   \\ \hline
+50 & C=C(C)C                             & 133 & A$A!N   \\ \hline
+51 & CSO                                 & 134 & X (HALOGEN)   \\ \hline
+52 & NN                                  & 135 & Nnot%A%A   \\ \hline
+53 & QHAAAQH                             & 136 & O=A > 1   \\ \hline
+54 & QHAAQH                              & 137 & HETEROCYCLE   \\ \hline
+55 & OSO                                 & 138 & QCH2A > 1     \\ \hline
+56 & ON(O)C                              & 139 & OH   \\ \hline
+57 & O HETEROCYCLE                       & 140 & O > 3     \\ \hline
+58 & QSQ                                 & 141 & CH3 > 2     \\ \hline
+59 & Snot%A%A                            & 142 & N > 1   \\ \hline
+60 & S=O                                 & 143 & A$A!O   \\ \hline
+61 & AS(A)A                              & 144 & Anot%A%Anot%A   \\ \hline
+62 & A$A!A$A                             & 145 & 6M RING > 1   \\ \hline
+63 & N=O                                 & 146 & O > 2   \\ \hline
+64 & A$A!S                               & 147 & ACH2CH2A   \\ \hline
+65 & C%N                                 & 148 & AQ(A)A   \\ \hline
+66 & CC(C)(C)A                           & 149 & CH3 > 1   \\ \hline
+67 & QS                                  & 150 & A!A$A!A   \\ \hline
+68 & QHQH                                & 151 & NH   \\ \hline
+69 & QQH                                 & 152 & OC(C)C   \\ \hline
+70 & QNQ                                 & 153 & QCH2A   \\ \hline
+71 & NO                                  & 154 & C=O   \\ \hline
+72 & OAAO                                & 155 & A!CH2!A   \\ \hline
+73 & S=A                                 & 156 & NA(A)A   \\ \hline
+74 & CH3ACH3                             & 157 & C-O   \\ \hline
+75 & A!N$A                               & 158 & C-N   \\ \hline
+76 & C=C(A)A                             & 159 & O > 1   \\ \hline
+77 & NAN                                 & 160 & CH3   \\ \hline
+78 & C=N                                 & 161 & N   \\ \hline
+79 & NAAN                                & 162 & AROMATIC   \\ \hline
+80 & NAAAN                               & 163 & 6M RING   \\ \hline
+81 & SA(A)A                              & 164 & O   \\ \hline
+82 & ACH2QH                              & 165 & RING   \\ \hline
+83 & QAAAA@1                             & 166 & FRAGMENTS   \\ \hline
