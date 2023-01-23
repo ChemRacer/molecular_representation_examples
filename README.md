@@ -1,8 +1,18 @@
-# Examples from the book X
-Fix this later
+# Molecular Representations for Machine Learning Examples
+In this GitHub repository, we provide code examples from the ACS In Focus "Molecular Representations for Machine Learning" by Grier M. Jones, Brittany Story, Vasileios Maroulas, and Konstantinos D. Vogiatzis.
+
+!!! ADD LICENSE !!!
+
+# Citation
+```
+ADD BIBTEX here
+```
+
 ## Setup
+These examples require multiple conda env and kernels...
+
 1. Install conda using [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-2. You will need a valid install of Psi4 and Psi4NumPy to run the DDCCSD tutorials. Link for installation information [Psi4NumPy](https://github.com/psi4/psi4numpy)
+                                                                                                                                                                    
 3. Clone repository
 ```
 git clone https://github.com/ChemRacer/DDQC_Demo.git
@@ -18,17 +28,4 @@ conda env create -f ddqc_demo.yml
 conda activate ddqc_demo
 ipython kernel install --user --name=ddqc_demo
 conda deactivate
-```
-
-## Case Studies
-To run the DDCCSD tutorial:
-```
-cd DDQC_Demo/DDCCSD/
-jupyter notebook DDCCSD_model.ipynb
-```
-
-To run the DDCASPT2 tutorial:
-```
-cd DDQC_Demo/DDCASPT2/
-jupyter notebook gen_pair.ipynb
 ```
