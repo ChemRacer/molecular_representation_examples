@@ -15,17 +15,5 @@ These examples require multiple conda env and kernels...
                                                                                                                                                                     
 3. Clone repository
 ```
-git clone https://github.com/ChemRacer/DDQC_Demo.git
-```
-4. Install conda environment named ddqc_demo
-```
-cd DDQC_Demo/conda-envs
-conda env create -f ddqc_demo.yml
-```
-
-5. Link conda environment to jupyter kernel
-```
-conda activate ddqc_demo
-ipython kernel install --user --name=ddqc_demo
-conda deactivate
+                                                    
 ```
