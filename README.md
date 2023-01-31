@@ -23,3 +23,5 @@ for root, dirs, files in os.walk(os.getcwd()):
           if os.path.exists(os.path.join(root,file)):
               print(file.split('.')[0], "https://colab.research.google.com/drive/"+get_id(os.path.join(root,file)))
 ```
+
+For help using [GitHub in Google Colab](https://medium.com/analytics-vidhya/how-to-use-google-colab-with-github-via-google-drive-68efb23a42d).
