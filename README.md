@@ -2,6 +2,14 @@
 In this GitHub repository, we provide code examples from the ACS In Focus "Molecular Representations for Machine Learning" by Grier M. Jones, Brittany Story, Vasileios Maroulas, and Konstantinos D. Vogiatzis.
 
 
+# Directories
+The directories in this repository contain the following:
+- `Chapter_2` : contains examples of graph-based methods
+- `Chapter_3` : contains examples of topology-based methods
+- `Chapter_4` : contains examples of physics-based methods
+
+
+
 
 # Citation
 ```
