@@ -3,11 +3,11 @@ In this GitHub repository, we provide code examples from the ACS In Focus "Molec
 
 
 # Directories
-The directories in this repository contain the following:
+The directories that are relevant for the examples in the book include:
 - `Chapter_2` : contains examples of graph-based methods
 - `Chapter_3` : contains examples of topology-based methods
 - `Chapter_4` : contains examples of physics-based methods
-
+- `example_structures` : xyz coordinates for 2-benzyloxirane and glycidol
 
 
 
