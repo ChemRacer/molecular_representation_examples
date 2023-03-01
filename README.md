@@ -13,7 +13,13 @@ The directories that are relevant for the examples in the book include:
 
 # Citation
 ```
-ADD BIBTEX here
+@book{janet2020machine,
+  title={Machine Learning in Chemistry},
+  author={Jones, Grier M. and Story, Brittany and Maroulas, Vasileios and Vogiatzis, Konstantinos D.},
+  volume={1},
+  year={2023},
+  publisher={American Chemical Society}
+}
 ```
 
 ## Setup
