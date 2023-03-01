@@ -1,6 +1,8 @@
 # Molecular Representations for Machine Learning Examples
 In this GitHub repository, we provide code examples from the ACS In Focus "Molecular Representations for Machine Learning" by Grier M. Jones, Brittany Story, Vasileios Maroulas, and Konstantinos D. Vogiatzis.
 
+![cover](figures/Vogiatzis_Cover_FINAL.jpg)
+
 
 # Directories
 The directories that are relevant for the examples in the book include:
