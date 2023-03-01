@@ -3,6 +3,10 @@ In this GitHub repository, we provide code examples from the ACS In Focus "Molec
 <p align="center">
  <img src="figures/Vogiatzis_Cover_FINAL.jpg" width=50% height=50%>
 </p>
+
+
+
+
 # Directories
 The directories that are relevant for the examples in the book include:
 - `Chapter_2` : contains examples of graph-based methods
