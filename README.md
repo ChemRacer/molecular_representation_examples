@@ -13,8 +13,8 @@ The directories that are relevant for the examples in the book include:
 
 # Citation
 ```
-@book{janet2020machine,
-  title={Machine Learning in Chemistry},
+@book{Molecular_Representations_for_Machine_Learning,
+  title={Molecular Representations for Machine Learning},
   author={Jones, Grier M. and Story, Brittany and Maroulas, Vasileios and Vogiatzis, Konstantinos D.},
   volume={1},
   year={2023},
